@@ -20,7 +20,7 @@ function setup() {
   loadPie(ceil(random(40, 120)));//Make Pies#####
   loadTri(ceil(random(40, 120)));//Make Pies#####
 
-  // nftSetup( );//Comment Out If Not Using#####
+  nftSetup( );//Comment Out If Not Using#####
 
   // frameRate(5);
 
@@ -30,9 +30,9 @@ function draw() {
   if (!pause){
     // background(0);
 
-    // runBox();//Run All Boxes#####
+    runBox();//Run All Boxes#####
     runPie();//Run All Pies#####
-    // runTri();//Run All Pies#####
+    runTri();//Run All Pies#####
 
   }
 
