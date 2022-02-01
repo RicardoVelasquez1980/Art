@@ -30,9 +30,9 @@ function draw() {
   if (!pause){
     // background(0);
 
-    runBox();//Run All Boxes#####
+    // runBox();//Run All Boxes#####
     runPie();//Run All Pies#####
-    runTri();//Run All Pies#####
+    // runTri();//Run All Pies#####
 
   }
 

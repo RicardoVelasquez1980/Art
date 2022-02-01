@@ -12,7 +12,7 @@ class Pie extends p5.Vector{
     this.sz = random(16);//Random Size#####
     this.ignore = random(255);
     this.mainClr = color(this.ignore, this.ignore, this.ignore, random(255));//Random GrayScale Shade#####
-    // this.mainClr = color(150, 10, 10, random(255));
+    // this.mainClr = color(random(255), random(255), random(255), random(255));
     this.tempClr = color(random(255), random(255), random(255), random(255));//A Splash Of Color#####
     this.usedClr = this.mainClr;//ReAssigned In this.checkBoxCollision#####
 
@@ -69,11 +69,11 @@ class Pie extends p5.Vector{
 
   checkBoxCollision(){
     let distance = 0;
-    for (let i = 0; i < boxes.length; i++){
-      if (boxes[i] !== this){//If The Object In Boxes Isnt THIS Same Object#####
-        let distance = dist(this.x, this.y, boxes[i].x, boxes[i].y);//Calc The Dist For Every Other Box#####
+    for (let i = 0; i < pies.length; i++){
+      if (pies[i] !== this){//If The Object In Boxes Isnt THIS Same Object#####
+        let distance = dist(this.x, this.y, pies[i].x, pies[i].y);//Calc The Dist For Every Other Box#####
 
-        if (distance < this.sz * 4){//If Dist Is Within A Certain Range#####
+        if (distance < this.sz * 16){//If Dist Is Within A Certain Range#####
           return this.tempClr;
         } else {
           return this.mainClr;

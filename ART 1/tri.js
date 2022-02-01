@@ -67,9 +67,9 @@ class Tri extends p5.Vector{
 
   checkBoxCollision(){
     let distance = 0;
-    for (let i = 0; i < boxes.length; i++){
-      if (boxes[i] !== this){//If The Object In Boxes Isnt THIS Same Object#####
-        let distance = dist(this.x, this.y, boxes[i].x, boxes[i].y);//Calc The Dist For Every Other Box#####
+    for (let i = 0; i < tris.length; i++){
+      if (tris[i] !== this){//If The Object In Boxes Isnt THIS Same Object#####
+        let distance = dist(this.x, this.y, tris[i].x, tris[i].y);//Calc The Dist For Every Other Box#####
 
         if (distance < this.sz * 4){//If Dist Is Within A Certain Range#####
           return this.tempClr;
