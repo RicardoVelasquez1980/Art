@@ -1,6 +1,8 @@
 //Ricardo Velasquez
-//ART
+//ART 2
 //Use https://ezgif.com/jpg-to-gif For The Gif Maker#####
+
+let curvatures = [];
 
 let cnv;
 
@@ -12,15 +14,19 @@ function setup() {
   cnv = createCanvas(windowWidth - 20, windowHeight - 60);
   cnv.position((windowWidth - width) / 2, 30);
 
-  // background(0);
+  background(0);
 
   // nftSetup();//Comment Out If Not Using#####
+
+  curvatureLoadRun("LOAD", 1);
 
 }
 
 function draw() {
   if (!pause){
-    background(0);
+    // background(0);
+
+    curvatureLoadRun("RUN", curvatures.length);
 
   }
 
@@ -84,3 +90,22 @@ function savCnv(lgth, typ){
   }
 
 }
+
+//Start Function curvatureLoadRun##########
+function curvatureLoadRun(action, qty){
+  if (action === "LOAD"){
+    for (let i = 0; i < qty; i++){
+      curvatures[i] = new Curvature();
+
+    }
+
+  } else if (action === "RUN"){
+    for (let i = 0; i < qty; i++){
+      curvatures[i].run();
+
+    }
+
+  }
+
+}
+//End Function curvatureLoadRun##########
