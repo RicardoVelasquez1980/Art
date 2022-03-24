@@ -24,8 +24,7 @@ class Curvature extends p5.Vector{
     this.control2Center = ceil(random(2));//Anchor The Control Orbits#####
     this.clr = color(random(255), random(255), random(255), random(255));
     // this.clr = color(0, 0, 255, random(255));
-    // this.sz = random(2, 7);
-    this.sz = random(6);
+    this.sz = random(2, 7);
     // this.sz = 0.2;
 
   }
@@ -39,8 +38,8 @@ class Curvature extends p5.Vector{
 
   render(){
     push();
-    // noFill();
-    fill(random(255), random(255), random(255), 1);
+    noFill();
+    // fill(0, 150, 200, 1);
     stroke(this.clr);
     strokeWeight(this.sz);
     bezier(this.x, this.y, this.control1.x, this.control1.y, this.control2.x, this.control2.y, this.anchor2.x, this.anchor2.y);
