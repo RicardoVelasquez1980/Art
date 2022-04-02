@@ -14,11 +14,11 @@ function setup() {
   cnv = createCanvas(windowWidth - 20, windowHeight - 60);
   cnv.position((windowWidth - width) / 2, 30);
 
-  background(255);
+  background(0);
 
-  loadBox(ceil(random(40, 120)));//Make Boxes#####
+  // loadBox(ceil(random(40, 120)));//Make Boxes#####
   loadPie(ceil(random(40, 120)));//Make Pies#####
-  loadTri(ceil(random(40, 120)));//Make Pies#####
+  // loadTri(ceil(random(40, 120)));//Make Pies#####
 
   // nftSetup( );//Comment Out If Not Using#####
 
@@ -30,8 +30,8 @@ function draw() {
   if (!pause){
     // background(0);
 
-    runBox();//Run All Boxes#####
-    // runPie();//Run All Pies#####
+    // runBox();//Run All Boxes#####
+    runPie();//Run All Pies#####
     // runTri();//Run All Pies#####
 
   }

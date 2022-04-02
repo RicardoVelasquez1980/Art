@@ -12,8 +12,8 @@ class Tri extends p5.Vector{
     this.sz = random(16);//Random Size#####
     this.ignore = random(255);
     // this.mainClr = color(this.ignore, this.ignore, this.ignore, random(255));//Random GrayScale Shade#####
-    this.mainClr = color(245, 212, 29, random(255));
-    this.tempClr = color(10, 150, 10, random(255));//A Splash Of Color#####
+    this.mainClr = color(0, 0, 255, random(255));
+    this.tempClr = color(255, 255, 255, random(255));//A Splash Of Color#####
     this.usedClr = this.mainClr;//ReAssigned In this.checkBoxCollision#####
 
   }
